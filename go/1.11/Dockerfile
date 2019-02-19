@@ -20,4 +20,6 @@ ENV PATH   ${GOPATH}/bin:${GOROOT}/bin:/usr/local/bin:${PATH}
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 
+RUN go get github.com/kardianos/govendor
+
 WORKDIR $GOPATH
