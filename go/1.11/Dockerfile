@@ -15,7 +15,7 @@ RUN wget -nv https://redirector.gvt1.com/edgedl/go/go${GOLANG_VERSION}.linux-amd
     rm /tmp/go${GOLANG_VERSION}.linux-amd64.tar.gz
 
 ENV GOROOT /usr/local/go
-ENV GOPATH /gopath
+ENV GOPATH /go
 ENV PATH   ${GOPATH}/bin:${GOROOT}/bin:/usr/local/bin:${PATH}
 
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
