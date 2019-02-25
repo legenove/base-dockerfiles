@@ -1,4 +1,4 @@
-package: app
+package: liveme-base-dockerfiles/go/web1.11
 import:
 - package: github.com/aws/aws-sdk-go
   version: 1.17.4
@@ -24,3 +24,7 @@ import:
   version: 1.9.1
   subpackages:
   - zapcore
+- package: github.com/spf13/viper
+  version: 1.3.1
+- package: github.com/fsnotify/fsnotify
+  version: v1.4.7
