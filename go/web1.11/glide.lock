@@ -1,5 +1,5 @@
-hash: ac3b20619384f97dbfea0e4862a5e5b7094e4f89c47057547b89816fe5d34c8e
-updated: 2019-02-25T19:52:24.333022+08:00
+hash: fec7dab3befc847bd22abebd1171641020828d9f88e2353b40fd75064871907f
+updated: 2019-04-16T15:03:22.026208+08:00
 imports:
 - name: github.com/aws/aws-sdk-go
   version: e8b22c9937cae1fee9bc364a88f3752cc4d1ac2f
@@ -126,6 +126,8 @@ imports:
   subpackages:
   - transform
   - unicode/norm
+- name: google.golang.org/grpc
+  version: 236199dd5f8031d698fb64091194aecd1c3895b2
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
 - name: gopkg.in/yaml.v2
