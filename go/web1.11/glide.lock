@@ -1,8 +1,8 @@
-hash: fec7dab3befc847bd22abebd1171641020828d9f88e2353b40fd75064871907f
-updated: 2019-04-16T15:03:22.026208+08:00
+hash: 8ea187a5d4f2d9e9cd2c4d035e3fb20415517b32704f9eca4086c2c67bb8fcfb
+updated: 2019-07-19T15:05:13.730489+08:00
 imports:
 - name: github.com/aws/aws-sdk-go
-  version: e8b22c9937cae1fee9bc364a88f3752cc4d1ac2f
+  version: b4d97e9cf75f3815bd694b8e0d6f9d81492c3586
   subpackages:
   - aws
   - aws/awserr
@@ -50,9 +50,13 @@ imports:
   - json
   - render
 - name: github.com/golang/protobuf
-  version: c823c79ea1570fb5ff454033735a8e68575d1d0f
+  version: 1e59b77b52bf8e4b449a57e6f79f21226d571845
   subpackages:
   - proto
+  - ptypes
+  - ptypes/any
+  - ptypes/duration
+  - ptypes/timestamp
 - name: github.com/hashicorp/hcl
   version: 65a6292f0157eff210d03ed1bf6c59b190b8b906
   subpackages:
@@ -102,11 +106,11 @@ imports:
 - name: github.com/spf13/viper
   version: 6d33b5a963d922d182c91e8a1c88d81fd150cfd4
 - name: github.com/ugorji/go
-  version: e444a5086c436778cf9281a7059a3d58b9e17935
+  version: bdcc60b419d136a85cdf2e7cbcac34b3f1cd6e57
   subpackages:
   - codec
 - name: go.uber.org/atomic
-  version: 1ea20fb1cbb1cc08cbd0d913a96dead89aa18289
+  version: df976f2515e274675050de7b3f42545de80594fd
 - name: go.uber.org/multierr
   version: 3c4937480c32f4c13a875a1829af76c98ca3d40a
 - name: go.uber.org/zap
@@ -117,19 +121,69 @@ imports:
   - internal/color
   - internal/exit
   - zapcore
+- name: golang.org/x/net
+  version: 66aacef3dd8a676686c7ae3716979581e8b03c47
+  subpackages:
+  - context
+  - http2
+  - http2/hpack
+  - idna
+  - internal/timeseries
+  - lex/httplex
+  - trace
 - name: golang.org/x/sys
-  version: cc5685c2db1239775905f3911f0067c0fa74762f
+  version: ebfc5b4631820b793c9010c87fd8fef0f39eb082
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: 6c92c7dc7f53607809182301b96e4cc1975143f1
+  version: b19bf474d317b857955b12035d2c5acb57ce8b01
   subpackages:
+  - secure/bidirule
   - transform
+  - unicode/bidi
   - unicode/norm
+- name: google.golang.org/genproto
+  version: 09f6ed296fc66555a25fe4ce95173148778dfa85
+  subpackages:
+  - googleapis/rpc/status
 - name: google.golang.org/grpc
   version: 236199dd5f8031d698fb64091194aecd1c3895b2
+  subpackages:
+  - balancer
+  - balancer/base
+  - balancer/roundrobin
+  - binarylog/grpc_binarylog_v1
+  - codes
+  - connectivity
+  - credentials
+  - credentials/internal
+  - encoding
+  - encoding/proto
+  - grpclog
+  - internal
+  - internal/backoff
+  - internal/balancerload
+  - internal/binarylog
+  - internal/channelz
+  - internal/envconfig
+  - internal/grpcrand
+  - internal/grpcsync
+  - internal/syscall
+  - internal/transport
+  - keepalive
+  - metadata
+  - naming
+  - peer
+  - resolver
+  - resolver/dns
+  - resolver/passthrough
+  - stats
+  - status
+  - tap
 - name: gopkg.in/go-playground/validator.v8
   version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/robfig/cron.v3
+  version: e4fa405d9559d6421e845edf5997b89461e3fd71
 - name: gopkg.in/yaml.v2
   version: 51d6538a90f86fe93ac480b35f37b2be17fef232
 testImports: []
