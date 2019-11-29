@@ -1,5 +1,5 @@
-hash: 8ea187a5d4f2d9e9cd2c4d035e3fb20415517b32704f9eca4086c2c67bb8fcfb
-updated: 2019-07-19T15:05:13.730489+08:00
+hash: f64ed96221f369b66b399d063987e00c60b9bea0ca348c339ab29a733ec4baef
+updated: 2019-11-29T19:35:46.126881+08:00
 imports:
 - name: github.com/aws/aws-sdk-go
   version: b4d97e9cf75f3815bd694b8e0d6f9d81492c3586
@@ -34,6 +34,8 @@ imports:
   - private/protocol/xml/xmlutil
   - service/sqs
   - service/sts
+- name: github.com/BurntSushi/toml
+  version: 3012a1dbe2e4bd1391d42b32f0577cb7bbc7f005
 - name: github.com/fsnotify/fsnotify
   version: c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9
 - name: github.com/garyburd/redigo
@@ -42,15 +44,17 @@ imports:
   - internal
   - redis
 - name: github.com/gin-contrib/sse
-  version: a7658810eb745c2f22927282dea478278103a897
+  version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938
 - name: github.com/gin-gonic/gin
   version: b869fe1415e4b9eb52f247441830d502aece2d4d
   subpackages:
   - binding
   - json
   - render
+- name: github.com/go-sql-driver/mysql
+  version: 72cd26f257d44c1114970e19afddcd812016007e
 - name: github.com/golang/protobuf
-  version: 1e59b77b52bf8e4b449a57e6f79f21226d571845
+  version: 822fe56949f5d56c9e2f02367c657e0e9b4d27d1
   subpackages:
   - proto
   - ptypes
@@ -58,7 +62,7 @@ imports:
   - ptypes/duration
   - ptypes/timestamp
 - name: github.com/hashicorp/hcl
-  version: 65a6292f0157eff210d03ed1bf6c59b190b8b906
+  version: cf7d376da96d9cecec7c7483cec2735efe54a410
   subpackages:
   - hcl/ast
   - hcl/parser
@@ -70,17 +74,17 @@ imports:
   - json/scanner
   - json/token
 - name: github.com/jinzhu/gorm
-  version: 472c70caa40267cb89fd8facb07fe6454b578626
+  version: 81c17a7e2529c59efc4e74c5b32c1fb71fb12fa2
 - name: github.com/jinzhu/inflection
-  version: 04140366298a54a039076d798123ffa108fff46c
+  version: f5c5f50e6090ae76a29240b61ae2a90dd810112e
 - name: github.com/jmespath/go-jmespath
   version: c2b33e8439af944379acbdd9c3a5fe0bc44bd8a5
 - name: github.com/json-iterator/go
   version: 1624edc4454b8682399def8740d46db5e4362ba4
 - name: github.com/magiconair/properties
-  version: 7757cc9fdb852f7579b24170bcacda2c7471bb6a
+  version: de8848e004dd33dc07a2947b3d76f618a7fc7ef1
 - name: github.com/mattn/go-isatty
-  version: a6dda38a851a575e6799957cdd53ffe0b3fdd90f
+  version: bf9a1dea1961e1d831824fb135332bfb8c10e8b8
 - name: github.com/mitchellh/mapstructure
   version: 3536a929edddb9a5b34bd6861dc4a9647cb459fe
 - name: github.com/modern-go/concurrent
@@ -90,29 +94,33 @@ imports:
 - name: github.com/nu7hatch/gouuid
   version: 179d4d0c4d8d407a32af483c2354df1d2c91e6c3
 - name: github.com/pelletier/go-toml
-  version: 27c6b39a135b7dc87a14afb068809132fb7a9a8f
+  version: 095a905e040b7b5dbec6ffe45263e663e50f1774
 - name: github.com/rs/xid
   version: 15d26544def341f036c5f8dca987a4cbe575032c
 - name: github.com/spf13/afero
-  version: f4711e4db9e9a1d3887343acb72b2bbfc2f686f5
+  version: 588a75ec4f32903aa5e39a2619ba6a4631e28424
   subpackages:
   - mem
 - name: github.com/spf13/cast
-  version: 8c9545af88b134710ab1cd196795e7f2388358d7
+  version: c01685bb8421cecb276fa517e91f757215f980b3
 - name: github.com/spf13/jwalterweatherman
   version: 94f6ae3ed3bceceafa716478c5fbf8d29ca601a1
 - name: github.com/spf13/pflag
-  version: 24fa6976df40757dce6aea913e7b81ade90530e1
+  version: 2e9d26c8c37aae03e3f9d4e90b7116f5accb7cab
 - name: github.com/spf13/viper
   version: 6d33b5a963d922d182c91e8a1c88d81fd150cfd4
 - name: github.com/ugorji/go
-  version: bdcc60b419d136a85cdf2e7cbcac34b3f1cd6e57
+  version: 42bc974514ff101a54c6b72a0e4dee29d96c0b26
   subpackages:
   - codec
 - name: go.uber.org/atomic
-  version: df976f2515e274675050de7b3f42545de80594fd
+  version: 40ae6a40a970ef4cdbffa7b24b280e316db8accc
 - name: go.uber.org/multierr
-  version: 3c4937480c32f4c13a875a1829af76c98ca3d40a
+  version: 824d08f79702fe5f54aca8400aa0d754318786e7
+- name: go.uber.org/tools
+  version: 2cfd321de3ee5d5f8a5fda2521d1703478334d98
+  subpackages:
+  - update-license
 - name: go.uber.org/zap
   version: ff33455a0e382e8a81d14dd7c922020b6b5e7982
   subpackages:
@@ -121,29 +129,52 @@ imports:
   - internal/color
   - internal/exit
   - zapcore
-- name: golang.org/x/net
-  version: 66aacef3dd8a676686c7ae3716979581e8b03c47
+- name: golang.org/x/lint
+  version: fdd1cda4f05fd1fd86124f0ef9ce31a0b72c8448
   subpackages:
-  - context
+  - golint
+- name: golang.org/x/net
+  version: ef20fe5d793301b553005db740f730d87993f778
+  subpackages:
+  - http/httpguts
   - http2
   - http2/hpack
   - idna
   - internal/timeseries
-  - lex/httplex
   - trace
 - name: golang.org/x/sys
-  version: ebfc5b4631820b793c9010c87fd8fef0f39eb082
+  version: 0c1ff786ef13daa914a3351c5e6b0321aed5960e
   subpackages:
   - unix
 - name: golang.org/x/text
-  version: b19bf474d317b857955b12035d2c5acb57ce8b01
+  version: 3d0f7978add91030e5e8976ff65ccdd828286cba
   subpackages:
   - secure/bidirule
   - transform
   - unicode/bidi
   - unicode/norm
+- name: golang.org/x/tools
+  version: ecd32218bd7f33fd31c1abbfb74283690bedd093
+  subpackages:
+  - go/analysis
+  - go/analysis/passes/inspect
+  - go/ast/astutil
+  - go/ast/inspector
+  - go/buildutil
+  - go/gcexportdata
+  - go/internal/cgo
+  - go/internal/gcimporter
+  - go/internal/packagesdriver
+  - go/loader
+  - go/packages
+  - go/types/objectpath
+  - go/types/typeutil
+  - internal/fastwalk
+  - internal/gopathwalk
+  - internal/semver
+  - internal/span
 - name: google.golang.org/genproto
-  version: 09f6ed296fc66555a25fe4ce95173148778dfa85
+  version: 83cc0476cb11ea0da33dacd4c6354ab192de6fe6
   subpackages:
   - googleapis/rpc/status
 - name: google.golang.org/grpc
@@ -186,4 +217,36 @@ imports:
   version: e4fa405d9559d6421e845edf5997b89461e3fd71
 - name: gopkg.in/yaml.v2
   version: 51d6538a90f86fe93ac480b35f37b2be17fef232
+- name: honnef.co/go/tools
+  version: dfe37feaecf7b73ce53f4fb8fa347265a77c6c4b
+  subpackages:
+  - arg
+  - cmd/staticcheck
+  - code
+  - config
+  - deprecated
+  - edit
+  - facts
+  - functions
+  - go/types/typeutil
+  - internal/cache
+  - internal/passes/buildir
+  - internal/renameio
+  - internal/robustio
+  - internal/sharedcheck
+  - ir
+  - ir/irutil
+  - lint
+  - lint/lintdsl
+  - lint/lintutil
+  - lint/lintutil/format
+  - loader
+  - pattern
+  - printf
+  - report
+  - simple
+  - staticcheck
+  - stylecheck
+  - unused
+  - version
 testImports: []
