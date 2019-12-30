@@ -1,14 +1,6 @@
-FROM amazonlinux:1
+FROM legenove/amazonlinux-1-base:v0.0.1
 
 ENV GOLANG_VERSION 1.11.5
-
-RUN yum update -y -q --security && \
-        yum install -y -q wget \
-        yum install -y -q git \
-        yum install -y -q gzip \
-        yum install -y -q tar.x86_64 \
-        yum install -y -q make \
-        yum clean all
 
 RUN wget -nv https://redirector.gvt1.com/edgedl/go/go${GOLANG_VERSION}.linux-amd64.tar.gz -O /tmp/go${GOLANG_VERSION}.linux-amd64.tar.gz && \
     tar -xzf /tmp/go${GOLANG_VERSION}.linux-amd64.tar.gz -C /usr/local/ && \
