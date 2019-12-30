@@ -1,4 +1,4 @@
-FROM legenove/amazonlinux-go-1-11:v0.05
+FROM legenove/amazonlinux-go-1-11:v0.06
 
 WORKDIR /go/src/app
 
